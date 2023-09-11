@@ -9,9 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetSection("ConnectionStrings:defaultConnction").Value));
 
+// do not add
 builder.Services.AddScoped<IEmployeeService,EmployeeService>();
 builder.Services.AddScoped<IEmployeeRepositoty, EmployeeRepository>();
 
+// do not add
 builder.Services.AddCors(options => options.AddDefaultPolicy(
                 builder => builder.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader()
             )) ;

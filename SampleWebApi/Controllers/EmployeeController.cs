@@ -17,7 +17,7 @@ namespace SampleWebApi.Controllers
         }
         [HttpGet]
         [Route("GetAllEmployees")]
-        public IActionResult GetAllEmployees()
+        public IActionResult GetAllEmp()
         {
             try
             {
